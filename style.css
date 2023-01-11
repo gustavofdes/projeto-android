@@ -11,7 +11,7 @@
 }*/
 
 
-.titulo_prin {
+header > h1 {
     font-family: 'Bebas Neue', cursive;
     text-align: center;
     padding-top: 50px;
