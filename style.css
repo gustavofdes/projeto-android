@@ -5,34 +5,45 @@
     src: url(fontes/idroid.otf) format(opentype);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: "Bebas_Neue";
+    src: url(fontes/BebasNeue-Regular.ttf) format(truetype);
+}
 
-/*:root {
-}*/
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
 
-
-header > h1 {
-    font-family: 'Bebas Neue', cursive;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom:  50px;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.37);
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas_Neue", cursive;
+    --fonte-android: "android", cursive;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-padrao);
+    text-align: justify;
     margin: 0;
     background-color: antiquewhite;
-    text-align: justify;
 }
 
-main p {
-    text-indent: 30px;
+header > h1 {
+    font-family: var(--fonte-destaque), cursive;
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.37);
+
+    padding-top: 50px;
+    padding-bottom:  25px;
+    margin: 0;
 }
 
 header {
-    background-image: linear-gradient(to bottom, #299629, #0b2c0b);
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
     color: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.575);
 }
@@ -40,8 +51,10 @@ header {
 
 header > p {
     text-align: center;
-    padding-bottom: 20px;
     text-shadow: 2px 2px 5px black;
+    font-size: 1em;
+
+    padding-bottom: 20px;
 }
 
 header > nav {
@@ -68,154 +81,23 @@ header > nav {
     background-color: #71b971;
     color: #0b2c0b;
     padding: 7px;
-}
-.corpo {
+} 
+
+main {
     background-color: white;
-    max-width: 1000px;
-    min-width: 300px;
+    max-width: 900px;
     margin: auto;
     padding: 10px;
-    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.37);
 }
 
-#titulo {
-    font-family: "android";
-    font-size: 25px;
+article > h1 {
+    font-family: var(--fonte-android);
     font-weight: normal;
-    color: #0b2c0b;
+    
+    color: var(--cor5);
 }
 
-.subtitulos {
-    font-family: "android";
-    font-weight: lighter;
-    font-size: 20px;
-    background-image: linear-gradient(to right, #55c255, rgba(0, 128, 0, 0));
-    padding-left: 5px;
+article > h2{
+    font-family: var(--fonte-android);
+    font-weight: normal;
 }
-
-.imagens_principal {
-    display: flex;
-    justify-content: center;
-    min-width: 280px;
-}
-
-#video {
-    background-color: #155515;
-    max-width: 1000px;
-    min-width: 300px;
-    margin: auto;
-    padding: 10px;
-    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.37);
-}
-
-iframe {
-    display: flex;
-    margin: auto;
-}
-
-.extra {
-    background-color: #55c255;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 5px;
-}
-
-#titulo_ext {
-    font-size: 1em;
-    background-color: #2e682e;
-    color: white;
-    padding: 8px;
-    margin: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.list {
-    display: flex;
-}
-
-.right_list{
-    width: 50vw;
-}
-
-ul{
-    list-style-type: none;
-}
-
-.left_list{
-    width: 50vw;
-}
-
-.link_list::before {
-    content: "✔ ";
-}
-
-#final {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-footer {
-    background-color: #155515;
-    padding: 10px;
-    margin-top: 15px;
-}
-
-.p_footer {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    color: #71b971;
-}
-
-.author {
-    color: white;
-}
-
-.links {
-    text-decoration: none;
-    font-weight: bold;
-    color: #2e682e;
-    transition-duration: .3s;
-    border-radius: 5px;
-}
-
-.links:hover{
-    text-decoration: underline;
-    color: #55c255;
-    background-color: #2e682e;
-    padding: 3px;
-    border-radius: 5px;
-}
-
-.embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    height: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-   }
-
-.embed-container iframe, .embed-container object, .embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   }
-
-.links::after {
-    content: "🔗";
-}
-
-.p_footer > a {
-    text-decoration: none;
-}
-
-.author:hover {
-    color: #55c255;
-    text-decoration: underline;
-}   
